@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="caec011c-e72b-476f-94d8-e7ebc14737f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/IQuizController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/QuizController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/CreateQuestion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/QuestionPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Quiz.java" afterDir="false" />
-    </list>
+    <list default="true" id="caec011c-e72b-476f-94d8-e7ebc14737f4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,8 +123,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Model/QuestionPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="31" selection-start-line="31" selection-end-line="31" />
+                <state relative-caret-position="345">
+                  <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -235,15 +227,16 @@
       <workItem from="1559278262608" duration="940000" />
       <workItem from="1559279370092" duration="5373000" />
       <workItem from="1562546413725" duration="303000" />
-      <workItem from="1562627508209" duration="363000" />
+      <workItem from="1562627508209" duration="785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6979000" />
+    <option name="totallyTimeSpent" value="7401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -332,8 +325,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/QuestionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="345">
+          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

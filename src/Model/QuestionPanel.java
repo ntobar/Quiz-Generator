@@ -51,7 +51,8 @@ public class QuestionPanel extends JPanel {
 
     this.qLabel = new JLabel("Create a Question");
     this.qTextArea =  new JTextArea(3,10);
-    qTextArea.setDoc
+    qTextArea.setLineWrap(true);
+    qTextArea.setWrapStyleWord(true);
 
     //qTextArea.getDocument().addDocumentListener();
 
