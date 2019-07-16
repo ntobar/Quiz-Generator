@@ -7,6 +7,12 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.event.DocumentListener;
 
+
+/**
+ * This Class is responsible for all the Front-End development for
+ * generating an individual question.
+ * Connects to Back-End Controller.
+ */
 public class QuestionPanel extends JPanel {
   public JLabel qLabel;
   public JTextArea qTextArea;
@@ -22,6 +28,9 @@ public class QuestionPanel extends JPanel {
   public JRadioButton wrongToggle1;
   public JRadioButton wrongToggle2;
   public JRadioButton wrongToggle3;
+
+  //Buttons to submit or delete
+  public JButton submitButton;
 
 
   public QuestionPanel() {
@@ -68,6 +77,10 @@ public class QuestionPanel extends JPanel {
     this.wrongToggle2 = new JRadioButton();
     this.wrongToggle3 = new JRadioButton();
 
+    //Initializing Submit Button
+    this.submitButton = new JButton("Submit");
+
+
 
     //Initializing JLabels
     JLabel answerLabel1 = new JLabel("Answer 1");
@@ -105,6 +118,8 @@ public class QuestionPanel extends JPanel {
     this.add(answerLabel4);
     this.add(answer4);
     this.add(wrongToggle3);
+
+    this.add(submitButton);
 
    // this.add(answer);
 
