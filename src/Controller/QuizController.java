@@ -66,6 +66,23 @@ public class QuizController implements IQuizController {
 
       model.setColor(Color.MAGENTA);
 
+      System.out.println("Question: " + question + "\n" +
+              "Answer 1: " + answer1 + "\n" +
+              "Answer 2: " + answer2 + "\n" +
+              "Answer 3: " + answer3 + "\n" +
+              "Answer 4: " + answer4 + "\n" +
+              "Correct Answer: " + correctAnswer);
+
+    }
+
+
+    if (e.getActionCommand().equals("question")) {
+
+      System.out.println("[QuizController]: Question Submitted");
+
+      String q = this.model.getText("question");
+      this.question = q;
+
     }
 
     if (e.getActionCommand().equals("answer1")) {
@@ -81,7 +98,7 @@ public class QuizController implements IQuizController {
 
     if (e.getActionCommand().equals("answer2")) {
 
-      System.out.println("[QuizController]: submitButton pressed");
+      System.out.println("[QuizController]: Answer 2 Submitted");
 
       String answer = this.model.getText("answer2");
       this.answer2 = answer;
@@ -90,7 +107,7 @@ public class QuizController implements IQuizController {
 
     if (e.getActionCommand().equals("answer3")) {
 
-      System.out.println("[QuizController]: submitButton pressed");
+      System.out.println("[QuizController]: Answer 3 Submitted");
 
       String answer = this.model.getText("answer3");
       this.answer3 = answer;
@@ -100,7 +117,7 @@ public class QuizController implements IQuizController {
 
     if (e.getActionCommand().equals("answer4")) {
 
-      System.out.println("[QuizController]: submitButton pressed");
+      System.out.println("[QuizController]: Answer 4 Submitted");
 
       String answer = this.model.getText("answer4");
       this.answer4 = answer;
@@ -110,9 +127,9 @@ public class QuizController implements IQuizController {
 
     if (e.getActionCommand().equals("correctToggle")) {
 
-      System.out.println("[QuizController]: submitButton pressed");
+      System.out.println("[QuizController]: first toggle");
 
-      if(((JButton) e.getSource()).isSelected()) {
+      if(((JRadioButton) e.getSource()).isSelected()) {
 
         this.correctAnswer = answer1;
 
@@ -123,9 +140,9 @@ public class QuizController implements IQuizController {
 
     if (e.getActionCommand().equals("wrongToggle1")) {
 
-      System.out.println("[QuizController]: submitButton pressed");
+      System.out.println("[QuizController]: second toggle");
 
-      if(((JButton) e.getSource()).isSelected()) {
+      if(((JRadioButton) e.getSource()).isSelected()) {
 
         this.correctAnswer = answer2;
 
@@ -136,9 +153,9 @@ public class QuizController implements IQuizController {
 
     if (e.getActionCommand().equals("wrongToggle2")) {
 
-      System.out.println("[QuizController]: submitButton pressed");
+      System.out.println("[QuizController]: third toggle");
 
-      if(((JButton) e.getSource()).isSelected()) {
+      if(((JRadioButton) e.getSource()).isSelected()) {
 
         this.correctAnswer = answer3;
 
@@ -148,9 +165,9 @@ public class QuizController implements IQuizController {
 
     if (e.getActionCommand().equals("wrongToggle3")) {
 
-      System.out.println("[QuizController]: submitButton pressed");
+      System.out.println("[QuizController]: fourth toggle");
 
-      if(((JButton) e.getSource()).isSelected()) {
+      if(((JRadioButton) e.getSource()).isSelected()) {
 
         this.correctAnswer = answer4;
 

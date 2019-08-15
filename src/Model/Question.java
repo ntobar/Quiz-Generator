@@ -81,7 +81,7 @@ public class Question extends JPanel {
     return correctAnswer;
   }
 
-  public void setCorrectAnswer(int correctAnswer) {
+  public void setCorrectAnswer(String correctAnswer) {
     this.correctAnswer = correctAnswer;
   }
 }

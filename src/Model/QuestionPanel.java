@@ -17,7 +17,7 @@ public class QuestionPanel extends JPanel {
   private Quiz quiz;
 
   public JLabel qLabel;
-  public JTextArea qTextArea;
+  public JTextField qTextArea;
 
   //TextFields for all the possible Answers
   public JTextField answer1;
@@ -64,9 +64,8 @@ public class QuestionPanel extends JPanel {
 
 
     this.qLabel = new JLabel("Create a Question");
-    this.qTextArea =  new JTextArea(3,10);
-    qTextArea.setLineWrap(true);
-    qTextArea.setWrapStyleWord(true);
+    this.qTextArea =  new JTextField(20);
+    this.qTextArea.setActionCommand("question");
 
     //qTextArea.getDocument().addDocumentListener();
 
@@ -155,7 +154,9 @@ public class QuestionPanel extends JPanel {
 
     //DocumentListener listenDoc
 
+
     //qTextArea.getDocument().addDocumentListener(listenDoc);
+    qTextArea.addActionListener(listen);
     answer1.addActionListener(listen);
     answer2.addActionListener(listen);
     answer3.addActionListener(listen);
@@ -200,8 +201,11 @@ public class QuestionPanel extends JPanel {
       case "answer3":
         return this.answer3.getText();
 
-      case "4":
+      case "answer4":
         return this.answer4.getText();
+
+      case "question":
+        return this.qTextArea.getText();
 
 
       default:
