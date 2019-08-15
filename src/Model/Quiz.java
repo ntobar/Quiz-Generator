@@ -5,6 +5,9 @@ import java.util.HashMap;
 
 import javax.swing.*;
 
+import Controller.IQuizController;
+import Controller.QuizController;
+
 public class Quiz extends JFrame {
   //Quiz Components
   private HashMap<Question, String> questions;
@@ -34,7 +37,7 @@ public class Quiz extends JFrame {
 
     //this.add(questionPanel);
 
-    this.qp = new QuestionPanel();
+    this.qp = new QuestionPanel(this);
     basePanel.add(qp);
 
 
@@ -47,7 +50,10 @@ public class Quiz extends JFrame {
 
   public static void main(String args[]) {
 
+
+
     Quiz q = new Quiz();
+    IQuizController quizController = new QuizController(q.qp);
 
 
   }

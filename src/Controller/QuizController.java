@@ -17,22 +17,7 @@ public class QuizController implements IQuizController {
 
   public QuizController(QuestionPanel model) {
     this.model = model;
-    model.setActionListener(this, new DocumentListener() {
-      @Override
-      public void insertUpdate(DocumentEvent e) {
-
-      }
-
-      @Override
-      public void removeUpdate(DocumentEvent e) {
-
-      }
-
-      @Override
-      public void changedUpdate(DocumentEvent e) {
-
-      }
-    });
+    model.setActionListener(this);
 
 
 

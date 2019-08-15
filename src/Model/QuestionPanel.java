@@ -14,6 +14,8 @@ import javax.swing.event.DocumentListener;
  * Connects to Back-End Controller.
  */
 public class QuestionPanel extends JPanel {
+  private Quiz quiz;
+
   public JLabel qLabel;
   public JTextArea qTextArea;
 
@@ -33,8 +35,10 @@ public class QuestionPanel extends JPanel {
   public JButton submitButton;
 
 
-  public QuestionPanel() {
+  public QuestionPanel(Quiz quiz) {
     super();
+
+    this.quiz = quiz;
 
 
     //this.setPreferredSize(new Dimension(500, 500));
@@ -141,9 +145,11 @@ public class QuestionPanel extends JPanel {
    * @param listen - ActionListener (Applicable to Buttons)
    * @param listenDoc - Document Listener (Applicable to Text Area)
    */
-  public void setActionListener(ActionListener listen, DocumentListener listenDoc) {
+  public void setActionListener(ActionListener listen) {
 
-    qTextArea.getDocument().addDocumentListener(listenDoc);
+    //DocumentListener listenDoc
+
+    //qTextArea.getDocument().addDocumentListener(listenDoc);
     answer1.addActionListener(listen);
     answer2.addActionListener(listen);
     answer3.addActionListener(listen);
