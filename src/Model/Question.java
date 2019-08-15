@@ -13,7 +13,7 @@ public class Question extends JPanel {
   //Model Components
   private String qstion;
   private ArrayList<String> answers;
-  private int correctAnswer;
+  private String correctAnswer;
   //GUI components
   public JPanel questionNamePanel;
   public JTextField questionPanel;
@@ -23,7 +23,7 @@ public class Question extends JPanel {
     super();
     this.qstion = "";
     this.answers = new ArrayList<>();
-    this.correctAnswer = 0;
+    this.correctAnswer = "";
 
 
     //Dimensions and Set Up
@@ -61,8 +61,27 @@ public class Question extends JPanel {
 
   }
 
+  public String getQstion() {
+    return qstion;
+  }
 
+  public void setQstion(String qstion) {
+    this.qstion = qstion;
+  }
 
+  public ArrayList<String> getAnswers() {
+    return answers;
+  }
 
+  public void setAnswers(ArrayList<String> answers) {
+    this.answers = answers;
+  }
 
+  public String getCorrectAnswer() {
+    return correctAnswer;
+  }
+
+  public void setCorrectAnswer(int correctAnswer) {
+    this.correctAnswer = correctAnswer;
+  }
 }

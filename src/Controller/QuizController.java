@@ -10,6 +10,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
+import Model.Question;
 import Model.QuestionPanel;
 
 public class QuizController implements IQuizController {
@@ -49,7 +50,19 @@ public class QuizController implements IQuizController {
 
       System.out.println("[QuizController]: submitButton pressed");
 
-      this.model.getQuiz().getQuestions().put()
+      ArrayList<String> answers = new ArrayList<>();
+
+      answers.add(correctAnswer);
+      answers.add(answer1);
+      answers.add(answer2);
+      answers.add(answer3);
+
+      Question q = new Question();
+      q.setQstion(question);
+      q.setAnswers(answers);
+
+
+      this.model.getQuiz().getQuestions().put(q, correctAnswer);
 
       model.setColor(Color.MAGENTA);
 
@@ -62,9 +75,7 @@ public class QuizController implements IQuizController {
       String answer = this.model.getText("answer1");
       this.answer1 = answer;
 
-      this.model.getQuiz().getQuestions().put(answer1)
 
-      model.setColor(Color.MAGENTA);
 
     }
 
@@ -75,10 +86,6 @@ public class QuizController implements IQuizController {
       String answer = this.model.getText("answer2");
       this.answer2 = answer;
 
-      this.model.getQuiz().getQuestions().put()
-
-      model.setColor(Color.MAGENTA);
-
     }
 
     if (e.getActionCommand().equals("answer3")) {
@@ -88,9 +95,6 @@ public class QuizController implements IQuizController {
       String answer = this.model.getText("answer3");
       this.answer3 = answer;
 
-      this.model.getQuiz().getQuestions().put()
-
-      model.setColor(Color.MAGENTA);
 
     }
 
@@ -101,9 +105,6 @@ public class QuizController implements IQuizController {
       String answer = this.model.getText("answer4");
       this.answer4 = answer;
 
-      this.model.getQuiz().getQuestions().put()
-
-      model.setColor(Color.MAGENTA);
 
     }
 
@@ -117,9 +118,6 @@ public class QuizController implements IQuizController {
 
       }
 
-      this.model.getQuiz().getQuestions().put()
-
-      model.setColor(Color.MAGENTA);
 
     }
 
@@ -134,10 +132,6 @@ public class QuizController implements IQuizController {
       }
 
 
-      this.model.getQuiz().getQuestions().put()
-
-      model.setColor(Color.MAGENTA);
-
     }
 
     if (e.getActionCommand().equals("wrongToggle2")) {
@@ -150,10 +144,6 @@ public class QuizController implements IQuizController {
 
       }
 
-      this.model.getQuiz().getQuestions().put()
-
-      model.setColor(Color.MAGENTA);
-
     }
 
     if (e.getActionCommand().equals("wrongToggle3")) {
@@ -165,10 +155,6 @@ public class QuizController implements IQuizController {
         this.correctAnswer = answer4;
 
       }
-
-      this.model.getQuiz().getQuestions().put()
-
-      model.setColor(Color.MAGENTA);
 
     }
 
