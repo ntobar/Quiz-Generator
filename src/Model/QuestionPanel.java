@@ -43,7 +43,7 @@ public class QuestionPanel extends JPanel {
     Color MAIA_BG_COLOR = new Color(40, 45, 51);
     Color MAIA_LOGO_COLOR = new Color(144, 195, 240);
 
-    this.setBackground(new Color(150,50,10));
+    this.setBackground(new Color(10,100,100));
 
 
     Border border = BorderFactory.createMatteBorder(6, 3, 6, 6,
@@ -67,18 +67,28 @@ public class QuestionPanel extends JPanel {
 
     //Initializing answer Text Fields
     this.answer1 = new JTextField();
+    this.answer1.setActionCommand("answer1");
+
     this.answer2 = new JTextField();
+    this.answer2.setActionCommand("answer2");
+
     this.answer3 = new JTextField();
+    this.answer3.setActionCommand("answer3");
+
     this.answer4 = new JTextField();
+    this.answer4.setActionCommand("answer4");
 
     //Initializing Toggle Buttons
     this.correctToggle = new JRadioButton();
+    this.correctToggle.setActionCommand("correctToggle");
+
     this.wrongToggle1 = new JRadioButton();
     this.wrongToggle2 = new JRadioButton();
     this.wrongToggle3 = new JRadioButton();
 
     //Initializing Submit Button
     this.submitButton = new JButton("Submit");
+    this.submitButton.setActionCommand("submitButton");
 
 
 
@@ -126,7 +136,11 @@ public class QuestionPanel extends JPanel {
   }
 
 
-
+  /**
+   * Connects Front-End buttons to Back-End Controller
+   * @param listen - ActionListener (Applicable to Buttons)
+   * @param listenDoc - Document Listener (Applicable to Text Area)
+   */
   public void setActionListener(ActionListener listen, DocumentListener listenDoc) {
 
     qTextArea.getDocument().addDocumentListener(listenDoc);
@@ -140,9 +154,18 @@ public class QuestionPanel extends JPanel {
     wrongToggle2.addActionListener(listen);
     wrongToggle3.addActionListener(listen);
 
+    submitButton.addActionListener(listen);
 
 
 
+
+
+  }
+
+
+  public void setColor(Color color) {
+
+    this.setBackground(color);
 
   }
 
