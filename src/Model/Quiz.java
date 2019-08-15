@@ -46,7 +46,9 @@ public class Quiz extends JFrame {
   }
 
 
-
+  public HashMap<Question, String> getQuestions() {
+    return questions;
+  }
 
   public static void main(String args[]) {
 

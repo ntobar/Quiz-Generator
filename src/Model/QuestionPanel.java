@@ -35,6 +35,7 @@ public class QuestionPanel extends JPanel {
   public JButton submitButton;
 
 
+
   public QuestionPanel(Quiz quiz) {
     super();
 
@@ -87,8 +88,13 @@ public class QuestionPanel extends JPanel {
     this.correctToggle.setActionCommand("correctToggle");
 
     this.wrongToggle1 = new JRadioButton();
+    this.wrongToggle1.setActionCommand("wrongToggle1");
+
     this.wrongToggle2 = new JRadioButton();
+    this.wrongToggle2.setActionCommand("wrongToggle2");
+
     this.wrongToggle3 = new JRadioButton();
+    this.wrongToggle3.setActionCommand("wrongToggle3");
 
     //Initializing Submit Button
     this.submitButton = new JButton("Submit");
@@ -173,6 +179,34 @@ public class QuestionPanel extends JPanel {
 
     this.setBackground(color);
 
+  }
+
+  public Quiz getQuiz() {
+    return quiz;
+  }
+
+  public String getText(String field) {
+    switch (field) {
+      case "answer1":
+
+
+        return this.answer1.getText();
+
+
+      case "answer2":
+
+        return this.answer2.getText();
+
+      case "answer3":
+        return this.answer3.getText();
+
+      case "4":
+        return this.answer4.getText();
+
+
+      default:
+        return "um what?";
+    }
   }
 
 }
