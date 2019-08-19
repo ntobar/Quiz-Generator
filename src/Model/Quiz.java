@@ -34,8 +34,9 @@ public class Quiz extends JFrame {
     this.add(basePanel);
 
 
-    this.questionGraphics = new QuestionGraphics(questions);
+
     this.questions = new HashMap<>();
+    this.questionGraphics = new QuestionGraphics(questions);
     //this.questionPanel = new Question();
 
     //this.add(questionPanel);
@@ -60,9 +61,12 @@ public class Quiz extends JFrame {
 
 
     //this.remove(basePanel);
-    //basepanel.add(questiongraphics);
+    questionGraphics.displayQuestion();
+    //basePanel.add(questionGraphics);
     System.out.println("[Quiz]: reached displayQuestion method");
     this.add(questionGraphics);
+    this.basePanel.setVisible(false);
+    questionGraphics.setVisible(true);
 
 
   }

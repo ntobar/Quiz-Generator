@@ -1,11 +1,13 @@
 package Model;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 
 public class QuestionGraphics extends JPanel {
 
@@ -22,6 +24,23 @@ public class QuestionGraphics extends JPanel {
   public QuestionGraphics(HashMap<Question, String> questions) {
     super();
 
+    Color MAIA_BG_COLOR = new Color(40, 45, 51);
+    Color MAIA_LOGO_COLOR = new Color(144, 195, 240);
+
+    this.setBackground(new Color(10,100,100));
+
+
+    Border border = BorderFactory.createMatteBorder(6, 3, 6, 6,
+            MAIA_LOGO_COLOR);
+    this.setBorder(BorderFactory.createTitledBorder(border,
+            "Card Factory", 0, 0, Font.getFont(Font.DIALOG),
+            MAIA_LOGO_COLOR));
+
+
+
+
+    this.setLayout(new BoxLayout(this,BoxLayout.PAGE_AXIS));
+
     this.questions = questions;
 
     this.questionLabel = new JLabel();
@@ -30,11 +49,9 @@ public class QuestionGraphics extends JPanel {
     this.answer3Label = new JLabel();
     this.answer4Label = new JLabel();
 
-    this.add(questionLabel);
-    this.add(answer1Label);
-    this.add(answer2Label);
-    this.add(answer3Label);
-    this.add(answer4Label);
+    this.setVisible(true);
+
+
 
 
   }
@@ -54,6 +71,13 @@ public class QuestionGraphics extends JPanel {
     this.answer2Label.setText(answers.get(1));
     this.answer3Label.setText(answers.get(2));
     this.answer4Label.setText(answers.get(3));
+
+
+    this.add(questionLabel);
+    this.add(answer1Label);
+    this.add(answer2Label);
+    this.add(answer3Label);
+    this.add(answer4Label);
 
 
 
