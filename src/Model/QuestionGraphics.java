@@ -1,11 +1,13 @@
 package Model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Set;
 
 import javax.swing.*;
 
 public class QuestionGraphics extends JPanel {
-  private Quiz quiz;
 
   private HashMap<Question, String> questions;
 
@@ -17,10 +19,10 @@ public class QuestionGraphics extends JPanel {
   private JLabel answer4Label;
 
 
-  public QuestionGraphics(Quiz quiz) {
+  public QuestionGraphics(HashMap<Question, String> questions) {
     super();
 
-    this.questions = quiz.getQuestions();
+    this.questions = questions;
 
     this.questionLabel = new JLabel();
     this.answer1Label = new JLabel();
@@ -38,6 +40,23 @@ public class QuestionGraphics extends JPanel {
   }
 
   public void displayQuestion() {
+    Set<Question> questionSet = questions.keySet();
+    ArrayList<Question> questionList = new ArrayList<>(questionSet);
+
+    //Questions
+    Question question1 = questionList.get(0);
+
+    //Answers
+    ArrayList<String> answers = question1.getAnswers();
+
+    this.questionLabel.setText(question1.getQstion());
+    this.answer1Label.setText(answers.get(0));
+    this.answer2Label.setText(answers.get(1));
+    this.answer3Label.setText(answers.get(2));
+    this.answer4Label.setText(answers.get(3));
+
+
+
 
 
 

@@ -85,6 +85,8 @@ public class QuizController implements IQuizController {
 
       System.out.println("[QuizController]: Finish Button Pressed");
 
+      this.model.getQuiz().displayQuestion();
+
 
 
     }

@@ -174,6 +174,7 @@ public class QuestionPanel extends JPanel {
     wrongToggle3.addActionListener(listen);
 
     submitButton.addActionListener(listen);
+    finishButton.addActionListener(listen);
 
 
 

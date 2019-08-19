@@ -9,6 +9,7 @@ import Controller.IQuizController;
 import Controller.QuizController;
 
 public class Quiz extends JFrame {
+  private QuestionGraphics questionGraphics;
   //Quiz Components
   private HashMap<Question, String> questions;
   private QuestionPanel qp;
@@ -22,6 +23,7 @@ public class Quiz extends JFrame {
     super();
 
 
+
     this.setTitle("- Quiz Generator -");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -32,6 +34,7 @@ public class Quiz extends JFrame {
     this.add(basePanel);
 
 
+    this.questionGraphics = new QuestionGraphics(questions);
     this.questions = new HashMap<>();
     //this.questionPanel = new Question();
 
@@ -55,12 +58,11 @@ public class Quiz extends JFrame {
 
   public void displayQuestion() {
 
-    JPanel displayPanel = new JPanel();
 
-
-
-
-    this.remove(basePanel);
+    //this.remove(basePanel);
+    //basepanel.add(questiongraphics);
+    System.out.println("[Quiz]: reached displayQuestion method");
+    this.add(questionGraphics);
 
 
   }
