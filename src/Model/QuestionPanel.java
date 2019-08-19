@@ -34,6 +34,8 @@ public class QuestionPanel extends JPanel {
   //Buttons to submit or delete
   public JButton submitButton;
 
+  public JButton finishButton;
+
 
 
   public QuestionPanel(Quiz quiz) {
@@ -99,6 +101,9 @@ public class QuestionPanel extends JPanel {
     this.submitButton = new JButton("Submit");
     this.submitButton.setActionCommand("submitButton");
 
+    this.finishButton = new JButton("Finish");
+    this.finishButton.setActionCommand("finishButton");
+
 
 
     //Initializing JLabels
@@ -139,6 +144,7 @@ public class QuestionPanel extends JPanel {
     this.add(wrongToggle3);
 
     this.add(submitButton);
+    this.add(finishButton);
 
    // this.add(answer);
 
@@ -211,6 +217,36 @@ public class QuestionPanel extends JPanel {
       default:
         return "um what?";
     }
+  }
+
+  public JTextField getqTextArea() {
+    return qTextArea;
+  }
+
+  public JTextField getAnswer1() {
+    return answer1;
+  }
+
+  public JTextField getAnswer2() {
+    return answer2;
+  }
+
+  public JTextField getAnswer3() {
+    return answer3;
+  }
+
+  public JTextField getAnswer4() {
+    return answer4;
+  }
+
+
+  public void resetFields() {
+    this.qTextArea.setText("");
+    this.answer1.setText("");
+    this.answer2.setText("");
+    this.answer3.setText("");
+    this.answer4.setText("");
+
   }
 
 }

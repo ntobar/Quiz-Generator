@@ -50,6 +50,21 @@ public class Quiz extends JFrame {
     return questions;
   }
 
+
+
+
+  public void displayQuestion() {
+
+    JPanel displayPanel = new JPanel();
+
+
+
+
+    this.remove(basePanel);
+
+
+  }
+
   public static void main(String args[]) {
 
 
@@ -59,6 +74,9 @@ public class Quiz extends JFrame {
 
 
   }
+
+
+
 
 
 

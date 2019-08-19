@@ -73,6 +73,20 @@ public class QuizController implements IQuizController {
               "Answer 4: " + answer4 + "\n" +
               "Correct Answer: " + correctAnswer);
 
+
+      //This resets fields
+      this.model.resetFields();
+      System.out.println("[QuizController]: Fields Reset");
+
+    }
+
+
+    if (e.getActionCommand().equals("finishButton")) {
+
+      System.out.println("[QuizController]: Finish Button Pressed");
+
+
+
     }
 
 
