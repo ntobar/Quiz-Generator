@@ -1,6 +1,7 @@
 package Model;
 
 import java.awt.*;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -36,6 +37,9 @@ public class QuestionGraphics extends JPanel {
             "Card Factory", 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
 
+    Border border1 = BorderFactory.createMatteBorder(1, 2, 1, 2,
+            MAIA_LOGO_COLOR);
+
 
 
 
@@ -44,10 +48,44 @@ public class QuestionGraphics extends JPanel {
     this.questions = questions;
 
     this.questionLabel = new JLabel();
+    this.questionLabel.setOpaque(true);
+    this.questionLabel.setBackground(Color.orange);
+    this.questionLabel.add(Box.createHorizontalStrut(30));
+    this.questionLabel.setBorder(BorderFactory.createTitledBorder(border1,
+            "Question", 0, 0, Font.getFont(Font.DIALOG),
+            MAIA_LOGO_COLOR));
+
     this.answer1Label = new JLabel();
+    this.answer1Label.setOpaque(true);
+    this.answer1Label.setBackground(Color.gray);
+    this.answer1Label.add(Box.createHorizontalStrut(30));
+    this.answer1Label.setBorder(BorderFactory.createTitledBorder(border1,
+            "Answer 1", 0, 0, Font.getFont(Font.DIALOG),
+            MAIA_LOGO_COLOR));
+
     this.answer2Label = new JLabel();
+    this.answer2Label.setOpaque(true);
+    this.answer2Label.setBackground(Color.gray);
+    this.answer2Label.add(Box.createHorizontalStrut(30));
+    this.answer2Label.setBorder(BorderFactory.createTitledBorder(border1,
+            "Answer 2", 0, 0, Font.getFont(Font.DIALOG),
+            MAIA_LOGO_COLOR));
+
     this.answer3Label = new JLabel();
+    this.answer3Label.setOpaque(true);
+    this.answer3Label.setBackground(Color.gray);
+    this.answer3Label.add(Box.createHorizontalStrut(30));
+    this.answer3Label.setBorder(BorderFactory.createTitledBorder(border1,
+            "Answer 3", 0, 0, Font.getFont(Font.DIALOG),
+            MAIA_LOGO_COLOR));
+
     this.answer4Label = new JLabel();
+    this.answer4Label.setOpaque(true);
+    this.answer4Label.setBackground(Color.gray);
+    this.answer4Label.add(Box.createHorizontalStrut(30));
+    this.answer4Label.setBorder(BorderFactory.createTitledBorder(border1,
+            "Answer 4", 0, 0, Font.getFont(Font.DIALOG),
+            MAIA_LOGO_COLOR));
 
     this.setVisible(true);
 
@@ -83,9 +121,11 @@ public class QuestionGraphics extends JPanel {
 
 
 
+  }
 
+  public void setMouseListener(MouseListener mListen) {
 
-
+    
   }
 
 
