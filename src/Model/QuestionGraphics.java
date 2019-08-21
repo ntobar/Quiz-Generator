@@ -20,10 +20,13 @@ public class QuestionGraphics extends JPanel {
   private JLabel answer2Label;
   private JLabel answer3Label;
   private JLabel answer4Label;
+  private String correctAnswer;
 
 
   public QuestionGraphics(HashMap<Question, String> questions) {
     super();
+
+    this.correctAnswer = "";
 
     Color MAIA_BG_COLOR = new Color(40, 45, 51);
     Color MAIA_LOGO_COLOR = new Color(144, 195, 240);
@@ -101,6 +104,11 @@ public class QuestionGraphics extends JPanel {
     //Questions
     Question question1 = questionList.get(0);
 
+
+    String correctAns = questions.get(question1);
+    System.out.println("[QuestionGraphics]: Correct Answer: " + correctAns);
+    this.correctAnswer = correctAns;
+
     //Answers
     ArrayList<String> answers = question1.getAnswers();
 
@@ -109,6 +117,14 @@ public class QuestionGraphics extends JPanel {
     this.answer2Label.setText(answers.get(1));
     this.answer3Label.setText(answers.get(2));
     this.answer4Label.setText(answers.get(3));
+
+    System.out.println("[QuestionGraphics]: ans1: " + answers.get(0));
+    System.out.println("[QuestionGraphics]: ans2: " + answers.get(1));
+    System.out.println("[QuestionGraphics]: ans3: " + answers.get(2));
+    System.out.println("[QuestionGraphics]: ans4: " + answers.get(3));
+
+
+
 
 
     this.add(questionLabel);
@@ -125,7 +141,42 @@ public class QuestionGraphics extends JPanel {
 
   public void setMouseListener(MouseListener mListen) {
 
-    
+    this.answer1Label.addMouseListener(mListen);
+    this.answer2Label.addMouseListener(mListen);
+    this.answer3Label.addMouseListener(mListen);
+    this.answer4Label.addMouseListener(mListen);
+
+
+  }
+
+
+  public void displayCorrect() {
+
+    ArrayList<JLabel> labels = new ArrayList<>();
+    labels.add(answer1Label);
+    labels.add(answer2Label);
+    labels.add(answer3Label);
+    labels.add(answer4Label);
+
+    for(int i = 0; i < 4; i++) {
+
+      if(labels.get(i).getText().equals(correctAnswer)) {
+
+        labels.get(i).setBackground(Color.GREEN);
+
+      } else {
+
+        labels.get(i).setBackground(Color.RED);
+
+      }
+
+
+
+
+    }
+
+
+
   }
 
 

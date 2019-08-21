@@ -76,7 +76,7 @@ public class Quiz extends JFrame {
 
 
     Quiz q = new Quiz();
-    IQuizController quizController = new QuizController(q.qp);
+    IQuizController quizController = new QuizController(q.qp, q.questionGraphics);
 
 
   }

@@ -12,22 +12,28 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 import Model.Question;
+import Model.QuestionGraphics;
 import Model.QuestionPanel;
 
 public class QuizController implements IQuizController {
   private QuestionPanel model;
+  private QuestionGraphics questionModel;
   private String question;
   private ArrayList<String> answers;
   private String correctAnswer;
+  private String transferableAns;
   private String answer1;
   private String answer2;
   private String answer3;
   private String answer4;
 
 
-  public QuizController(QuestionPanel model) {
+  public QuizController(QuestionPanel model, QuestionGraphics questionModel) {
     this.model = model;
+    this.questionModel = questionModel;
     model.setActionListener(this);
+    questionModel.setMouseListener(this);
+
 
     this.question = "";
     this.answers = new ArrayList<>();
@@ -36,6 +42,7 @@ public class QuizController implements IQuizController {
     this.answer2 = "";
     this.answer3 = "";
     this.answer4 = "";
+    this.transferableAns = "";
 
 
 
@@ -53,10 +60,12 @@ public class QuizController implements IQuizController {
 
       ArrayList<String> answers = new ArrayList<>();
 
-      answers.add(correctAnswer);
+//      answers.add(correctAnswer);
       answers.add(answer1);
       answers.add(answer2);
       answers.add(answer3);
+      answers.add(answer4);
+      answers.add(correctAnswer);
 
       Question q = new Question();
       q.setQstion(question);
@@ -149,6 +158,7 @@ public class QuizController implements IQuizController {
       if(((JRadioButton) e.getSource()).isSelected()) {
 
         this.correctAnswer = answer1;
+        //this.transferableAns = answer1;
 
       }
 
@@ -162,6 +172,7 @@ public class QuizController implements IQuizController {
       if(((JRadioButton) e.getSource()).isSelected()) {
 
         this.correctAnswer = answer2;
+       // this.transferableAns = answer2;
 
       }
 
@@ -175,6 +186,7 @@ public class QuizController implements IQuizController {
       if(((JRadioButton) e.getSource()).isSelected()) {
 
         this.correctAnswer = answer3;
+        //this.transferableAns = answer3;
 
       }
 
@@ -187,6 +199,7 @@ public class QuizController implements IQuizController {
       if(((JRadioButton) e.getSource()).isSelected()) {
 
         this.correctAnswer = answer4;
+        //this.transferableAns = answer4;
 
       }
 
@@ -223,6 +236,8 @@ public class QuizController implements IQuizController {
 
   @Override
   public void mouseReleased(MouseEvent e) {
+
+    this.questionModel.displayCorrect();
 
   }
 

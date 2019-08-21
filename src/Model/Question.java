@@ -70,6 +70,10 @@ public class Question extends JPanel {
   }
 
   public ArrayList<String> getAnswers() {
+    System.out.println("[Question]: answers.get(0): " + answers.get(0));
+    System.out.println("[Question]: answers.get(1): " + answers.get(1));
+    System.out.println("[Question]: answers.get(2): " + answers.get(2));
+    System.out.println("[Question]: answers.get(3): " + answers.get(3));
     return answers;
   }
 
