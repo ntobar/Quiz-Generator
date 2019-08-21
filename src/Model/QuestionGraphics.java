@@ -57,6 +57,9 @@ public class QuestionGraphics extends JPanel {
     this.questionLabel.setBorder(BorderFactory.createTitledBorder(border1,
             "Question", 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
+    this.questionLabel.setMinimumSize(new Dimension(400, 40));
+    this.questionLabel.setPreferredSize(new Dimension(400, 40));
+    this.questionLabel.setMaximumSize(new Dimension(400, 40));
 
     this.answer1Label = new JLabel();
     this.answer1Label.setOpaque(true);
@@ -65,9 +68,12 @@ public class QuestionGraphics extends JPanel {
     this.answer1Label.setBorder(BorderFactory.createTitledBorder(border1,
             "Answer 1", 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
+    this.answer1Label.setMinimumSize(new Dimension(400, 40));
+    this.answer1Label.setPreferredSize(new Dimension(400, 40));
+    this.answer1Label.setMaximumSize(new Dimension(400, 40));
 
     this.answer2Label = new JLabel();
-    this.answer2Label.setOpaque(true);
+    this.answer2Label.setOpaque(true)g;
     this.answer2Label.setBackground(Color.gray);
     this.answer2Label.add(Box.createHorizontalStrut(30));
     this.answer2Label.setBorder(BorderFactory.createTitledBorder(border1,
