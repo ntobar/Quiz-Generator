@@ -71,6 +71,12 @@ public class Quiz extends JFrame {
 
   }
 
+
+  public void removeQuestion() {
+
+    questionGraphics.removeQuestion();
+  }
+
   public static void main(String args[]) {
 
 

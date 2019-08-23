@@ -1,6 +1,8 @@
 package Model;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -115,6 +117,7 @@ public class QuestionGraphics extends JPanel {
 
 
     this.nextButton = new JButton("Next");
+    this.nextButton.setActionCommand("nextButton");
 
 
     this.setVisible(true);
@@ -123,6 +126,22 @@ public class QuestionGraphics extends JPanel {
 
 
   }
+
+  public void removeQuestion() {
+
+    Set<Question> questionSet = questions.keySet();
+    ArrayList<Question> questionList = new ArrayList<>(questionSet);
+
+    //Questions
+    Question question1 = questionList.get(0);
+
+
+    String correctAns = questions.get(question1);
+
+    questions.remove(question1, correctAns);
+
+  }
+
 
   public void displayQuestion() {
     Set<Question> questionSet = questions.keySet();
@@ -172,6 +191,10 @@ public class QuestionGraphics extends JPanel {
 
 
 
+  }
+
+  public void setActionListener(ActionListener listen) {
+    this.nextButton.addActionListener(listen);
   }
 
   public void setMouseListener(MouseListener mListen) {

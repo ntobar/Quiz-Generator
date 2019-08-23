@@ -33,6 +33,7 @@ public class QuizController implements IQuizController {
     this.questionModel = questionModel;
     model.setActionListener(this);
     questionModel.setMouseListener(this);
+    questionModel.setActionListener(this);
 
 
     this.question = "";
@@ -53,6 +54,16 @@ public class QuizController implements IQuizController {
 
   @Override
   public void actionPerformed(ActionEvent e) {
+
+    if (e.getActionCommand().equals("nextButton")) {
+
+      System.out.println("[QuizController]: nextButton pressed");
+
+      this.model.getQuiz().removeQuestion();
+      this.model.getQuiz().displayQuestion();
+
+
+    }
 
     if (e.getActionCommand().equals("submitButton")) {
 
@@ -96,6 +107,7 @@ public class QuizController implements IQuizController {
       System.out.println("[QuizController]: Finish Button Pressed");
 
       this.model.getQuiz().displayQuestion();
+      //this.model.getQuiz().removeQuestion();
 
 
 
