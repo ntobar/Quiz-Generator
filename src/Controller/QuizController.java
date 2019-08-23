@@ -249,7 +249,10 @@ public class QuizController implements IQuizController {
   @Override
   public void mouseReleased(MouseEvent e) {
 
-    this.questionModel.displayCorrect();
+    this.questionModel.displayCorrect((JLabel) e.getSource());
+
+
+
 
   }
 

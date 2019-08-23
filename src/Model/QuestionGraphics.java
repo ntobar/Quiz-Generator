@@ -11,6 +11,8 @@ import java.util.Set;
 
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.plaf.ColorUIResource;
+
 
 public class QuestionGraphics extends JPanel {
 
@@ -25,28 +27,37 @@ public class QuestionGraphics extends JPanel {
   private String correctAnswer;
   private JPanel qPanel;
   private JButton nextButton;
+  private int correct;
+  private int total;
+  private String score;
 
 
   public QuestionGraphics(HashMap<Question, String> questions) {
     super();
 
     this.correctAnswer = "";
+    this.correct = 0;
+    this.total = 0;
+    this.score = "You finished the Quiz!\n" + "You got " + this.correct + " out of " + this.total + " Questions correct";
 
 
-    Color MAIA_BG_COLOR = new Color(40, 45, 51);
-    Color MAIA_LOGO_COLOR = new Color(144, 195, 240);
+//    Color MAIA_BG_COLOR = new Color(40, 45, 51);
+//    Color MAIA_LOGO_COLOR = new Color(144, 195, 240);
+
+    Color MAIN_BLUE = new Color(3,57,108);
+    Color SEC_BLUE = new Color(53,167,156);
 
     this.setBackground(new Color(10,100,100));
 
 
     Border border = BorderFactory.createMatteBorder(6, 3, 6, 6,
-            MAIA_LOGO_COLOR);
+           MAIN_BLUE);
     this.setBorder(BorderFactory.createTitledBorder(border,
-            "Card Factory", 0, 0, Font.getFont(Font.DIALOG),
-            MAIA_LOGO_COLOR));
+            "QuizWiz", 0, 0, Font.getFont(Font.DIALOG),
+            SEC_BLUE));
 
     Border border1 = BorderFactory.createMatteBorder(1, 2, 1, 2,
-            MAIA_LOGO_COLOR);
+            SEC_BLUE);
 
 
     qPanel = new JPanel();
@@ -63,7 +74,7 @@ public class QuestionGraphics extends JPanel {
     this.questionLabel.setBackground(Color.orange);
     this.questionLabel.setBorder(BorderFactory.createTitledBorder(border1,
             "Question", 0, 0, Font.getFont(Font.DIALOG),
-            MAIA_LOGO_COLOR));
+            SEC_BLUE));
     this.questionLabel.setMinimumSize(new Dimension(400, 40));
     this.questionLabel.setPreferredSize(new Dimension(400, 40));
     this.questionLabel.setMaximumSize(new Dimension(400, 40));
@@ -75,7 +86,7 @@ public class QuestionGraphics extends JPanel {
     this.answer1Label.add(Box.createHorizontalStrut(30));
     this.answer1Label.setBorder(BorderFactory.createTitledBorder(border1,
             "Answer 1", 0, 0, Font.getFont(Font.DIALOG),
-            MAIA_LOGO_COLOR));
+            MAIN_BLUE));
     this.answer1Label.setMinimumSize(new Dimension(400, 40));
     this.answer1Label.setPreferredSize(new Dimension(400, 40));
     this.answer1Label.setMaximumSize(new Dimension(400, 40));
@@ -86,7 +97,7 @@ public class QuestionGraphics extends JPanel {
     this.answer2Label.add(Box.createHorizontalStrut(30));
     this.answer2Label.setBorder(BorderFactory.createTitledBorder(border1,
             "Answer 2", 0, 0, Font.getFont(Font.DIALOG),
-            MAIA_LOGO_COLOR));
+            MAIN_BLUE));
     this.answer2Label.setMinimumSize(new Dimension(400, 40));
     this.answer2Label.setPreferredSize(new Dimension(400, 40));
     this.answer2Label.setMaximumSize(new Dimension(400, 40));
@@ -98,7 +109,7 @@ public class QuestionGraphics extends JPanel {
     this.answer3Label.add(Box.createHorizontalStrut(30));
     this.answer3Label.setBorder(BorderFactory.createTitledBorder(border1,
             "Answer 3", 0, 0, Font.getFont(Font.DIALOG),
-            MAIA_LOGO_COLOR));
+            MAIN_BLUE));
     this.answer3Label.setMinimumSize(new Dimension(400, 40));
     this.answer3Label.setPreferredSize(new Dimension(400, 40));
     this.answer3Label.setMaximumSize(new Dimension(400, 40));
@@ -110,7 +121,7 @@ public class QuestionGraphics extends JPanel {
     this.answer4Label.add(Box.createHorizontalStrut(30));
     this.answer4Label.setBorder(BorderFactory.createTitledBorder(border1,
             "Answer 4", 0, 0, Font.getFont(Font.DIALOG),
-            MAIA_LOGO_COLOR));
+            MAIN_BLUE));
     this.answer4Label.setMinimumSize(new Dimension(400, 40));
     this.answer4Label.setPreferredSize(new Dimension(400, 40));
     this.answer4Label.setMaximumSize(new Dimension(400, 40));
@@ -139,6 +150,10 @@ public class QuestionGraphics extends JPanel {
     String correctAns = questions.get(question1);
 
     questions.remove(question1, correctAns);
+    this.resetLabels();
+
+
+
 
   }
 
@@ -148,28 +163,58 @@ public class QuestionGraphics extends JPanel {
     ArrayList<Question> questionList = new ArrayList<>(questionSet);
 
     //Questions
-    Question question1 = questionList.get(0);
+
+    if(questionList.size() == 0) {
+
+      UIManager uI = new UIManager();
+      uI.put("OptionPane.background", new ColorUIResource(218, 165, 32));
+      uI.put("Panel.background", new ColorUIResource(218, 165, 32));
+
+     // JOptionPane.showOptionDialog(this, "Finished, get score?");
 
 
-    String correctAns = questions.get(question1);
-    System.out.println("[QuestionGraphics]: Correct Answer: " + correctAns);
-    this.correctAnswer = correctAns;
+      int choice = JOptionPane.showOptionDialog(null,
+              "Do you wish to see your score?",
+              "Score?",
+              JOptionPane.YES_NO_OPTION,
+              JOptionPane.QUESTION_MESSAGE,
+              null, null, null);
 
-    //Answers
-    ArrayList<String> answers = question1.getAnswers();
+     // JOptionPane.showOptionDialog()
 
-    this.questionLabel.setText(question1.getQstion());
-    this.answer1Label.setText(answers.get(0));
-    this.answer2Label.setText(answers.get(1));
-    this.answer3Label.setText(answers.get(2));
-    this.answer4Label.setText(answers.get(3));
+      if (choice == JOptionPane.YES_OPTION) {
 
-    System.out.println("[QuestionGraphics]: ans1: " + answers.get(0));
-    System.out.println("[QuestionGraphics]: ans2: " + answers.get(1));
-    System.out.println("[QuestionGraphics]: ans3: " + answers.get(2));
-    System.out.println("[QuestionGraphics]: ans4: " + answers.get(3));
+        JOptionPane.showMessageDialog(this,
+                "You finished the Quiz!\n" + "You got " + this.correct + " out of " + this.total + " Questions correct");
+
+      } else {
+        System.exit(0);
+      }
 
 
+    } else {
+
+
+      Question question1 = questionList.get(0);
+
+
+      String correctAns = questions.get(question1);
+      System.out.println("[QuestionGraphics]: Correct Answer: " + correctAns);
+      this.correctAnswer = correctAns;
+
+      //Answers
+      ArrayList<String> answers = question1.getAnswers();
+
+      this.questionLabel.setText(question1.getQstion());
+      this.answer1Label.setText(answers.get(0));
+      this.answer2Label.setText(answers.get(1));
+      this.answer3Label.setText(answers.get(2));
+      this.answer4Label.setText(answers.get(3));
+
+      System.out.println("[QuestionGraphics]: ans1: " + answers.get(0));
+      System.out.println("[QuestionGraphics]: ans2: " + answers.get(1));
+      System.out.println("[QuestionGraphics]: ans3: " + answers.get(2));
+      System.out.println("[QuestionGraphics]: ans4: " + answers.get(3));
 
 
 //    qPanel.add(questionLabel);
@@ -180,13 +225,15 @@ public class QuestionGraphics extends JPanel {
 //
 //    this.add(qPanel);
 
-    this.add(questionLabel);
-    this.add(answer1Label);
-    this.add(answer2Label);
-    this.add(answer3Label);
-    this.add(answer4Label);
+      this.add(questionLabel);
+      this.add(answer1Label);
+      this.add(answer2Label);
+      this.add(answer3Label);
+      this.add(answer4Label);
 
-    this.add(nextButton);
+      this.add(nextButton);
+
+    }
 
 
 
@@ -208,7 +255,7 @@ public class QuestionGraphics extends JPanel {
   }
 
 
-  public void displayCorrect() {
+  public void resetLabels() {
 
     ArrayList<JLabel> labels = new ArrayList<>();
     labels.add(answer1Label);
@@ -216,21 +263,52 @@ public class QuestionGraphics extends JPanel {
     labels.add(answer3Label);
     labels.add(answer4Label);
 
+
+    for(int i = 0; i < 4; i++) {
+
+
+        labels.get(i).setBackground(Color.GRAY);
+
+
+
+
+    }
+  }
+
+
+
+
+  public void displayCorrect(JLabel label) {
+
+    ArrayList<JLabel> labels = new ArrayList<>();
+    labels.add(answer1Label);
+    labels.add(answer2Label);
+    labels.add(answer3Label);
+    labels.add(answer4Label);
+
+    this.total++;
+
     for(int i = 0; i < 4; i++) {
 
       if(labels.get(i).getText().equals(correctAnswer)) {
 
         labels.get(i).setBackground(Color.GREEN);
 
+
       } else {
 
         labels.get(i).setBackground(Color.RED);
+
 
       }
 
 
 
 
+    }
+
+    if(label.getBackground().equals(Color.GREEN)) {
+      this.correct++;
     }
 
 

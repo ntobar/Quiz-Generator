@@ -46,17 +46,20 @@ public class QuestionPanel extends JPanel {
 
     //this.setPreferredSize(new Dimension(500, 500));
 
+    Color MAIN_BLUE = new Color(3,57,108);
+    Color SEC_BLUE = new Color(53,167,156);
+
 
     Color MAIA_BG_COLOR = new Color(40, 45, 51);
     Color MAIA_LOGO_COLOR = new Color(144, 195, 240);
 
-    this.setBackground(new Color(10,100,100));
+    this.setBackground(SEC_BLUE);
 
 
     Border border = BorderFactory.createMatteBorder(6, 3, 6, 6,
-            MAIA_LOGO_COLOR);
+            MAIN_BLUE);
     this.setBorder(BorderFactory.createTitledBorder(border,
-            "Card Factory", 0, 0, Font.getFont(Font.DIALOG),
+            "QuizWiz", 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
 
 
