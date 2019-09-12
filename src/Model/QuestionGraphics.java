@@ -278,6 +278,10 @@ public class QuestionGraphics extends JPanel {
 
 
 
+
+
+
+
   public void displayCorrect(JLabel label) {
 
     ArrayList<JLabel> labels = new ArrayList<>();

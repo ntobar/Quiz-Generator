@@ -10,6 +10,7 @@ import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.plaf.ColorUIResource;
 
 import Model.Question;
 import Model.QuestionGraphics;
@@ -97,6 +98,7 @@ public class QuizController implements IQuizController {
 
       //This resets fields
       this.model.resetFields();
+      this.model.resetRadio();
       System.out.println("[QuizController]: Fields Reset");
 
     }
@@ -105,6 +107,18 @@ public class QuizController implements IQuizController {
     if (e.getActionCommand().equals("finishButton")) {
 
       System.out.println("[QuizController]: Finish Button Pressed");
+
+      if(this.model.getQuiz().getQuestions().isEmpty()) {
+
+        UIManager uI = new UIManager();
+        uI.put("OptionPane.background", new ColorUIResource(218, 165, 32));
+        uI.put("Panel.background", new ColorUIResource(218, 165, 32));
+
+
+        JOptionPane.showMessageDialog(this.questionModel, "No questions have been added yet");
+
+
+      }
 
       this.model.getQuiz().displayQuestion();
       //this.model.getQuiz().removeQuestion();

@@ -1,8 +1,7 @@
 package Model;
-
 import java.awt.*;
 import java.awt.event.ActionListener;
-
+import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.event.DocumentListener;
@@ -154,6 +153,28 @@ public class QuestionPanel extends JPanel {
   }
 
 
+
+  public void resetRadio() {
+
+    ArrayList<JRadioButton> radioList = new ArrayList<>();
+    radioList.add(correctToggle);
+    radioList.add(wrongToggle1);
+    radioList.add(wrongToggle2);
+    radioList.add(wrongToggle3);
+
+
+    for(int i = 0; i < 4; i++) {
+
+
+      radioList.get(i).setSelected(false);
+
+
+
+
+    }
+  }
+
+
   /**
    * Connects Front-End buttons to Back-End Controller
    * @param listen - ActionListener (Applicable to Buttons)
@@ -184,6 +205,8 @@ public class QuestionPanel extends JPanel {
 
 
   }
+
+
 
 
   public void setColor(Color color) {
