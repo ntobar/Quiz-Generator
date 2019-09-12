@@ -76,6 +76,8 @@ public class QuestionPanel extends JPanel {
     //Initializing answer Text Fields
     this.answer1 = new JTextField();
     this.answer1.setActionCommand("answer1");
+    this.answer1.setToolTipText("<html><b><font color=red>"
+            + "Please enter some text here" + "</font></b></html>");
 
     this.answer2 = new JTextField();
     this.answer2.setActionCommand("answer2");
