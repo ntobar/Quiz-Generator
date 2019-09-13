@@ -71,16 +71,25 @@ public class QuizController implements IQuizController {
 
       System.out.println("[QuizController]: submitButton pressed");
 
+      //Recording Question JTextArea Text
       String q1 = this.model.getText("question");
       this.question = q1;
+
+      //Recording Answer 1 JTextArea Text
       String answer = this.model.getText("answer1");
       this.answer1 = answer;
-      String answer1 = this.model.getText("answer2");
-      this.answer2 = answer1;
-      String answer2 = this.model.getText("answer3");
-      this.answer3 = answer2;
-      String answer3 = this.model.getText("answer4");
-      this.answer4 = answer3;
+
+      //Recording Answer 2 JTextArea Text
+      String answer01 = this.model.getText("answer2");
+      this.answer2 = answer01;
+
+      //Recording Answer 3 JTextArea Text
+      String answer02 = this.model.getText("answer3");
+      this.answer3 = answer02;
+
+      //Recording Answer 4 JTextArea Text
+      String answer03 = this.model.getText("answer4");
+      this.answer4 = answer03;
 
 
 
@@ -143,55 +152,55 @@ public class QuizController implements IQuizController {
     }
 
 
-    if (e.getActionCommand().equals("question")) {
-
-      System.out.println("[QuizController]: Question Submitted");
-
-
-      String q = this.model.getText("question");
-      this.question = q;
-
-    }
-
-    if (e.getActionCommand().equals("answer1")) {
-
-      System.out.println("[QuizController]: Answer 1 Submitted");
-
-      String answer = this.model.getText("answer1");
-      this.answer1 = answer;
-
-
-
-    }
-
-    if (e.getActionCommand().equals("answer2")) {
-
-      System.out.println("[QuizController]: Answer 2 Submitted");
-
-      String answer = this.model.getText("answer2");
-      this.answer2 = answer;
-
-    }
-
-    if (e.getActionCommand().equals("answer3")) {
-
-      System.out.println("[QuizController]: Answer 3 Submitted");
-
-      String answer = this.model.getText("answer3");
-      this.answer3 = answer;
-
-
-    }
-
-    if (e.getActionCommand().equals("answer4")) {
-
-      System.out.println("[QuizController]: Answer 4 Submitted");
-
-      String answer = this.model.getText("answer4");
-      this.answer4 = answer;
-
-
-    }
+//    if (e.getActionCommand().equals("question")) {
+//
+//      System.out.println("[QuizController]: Question Submitted");
+//
+//
+//      String q = this.model.getText("question");
+//      this.question = q;
+//
+//    }
+//
+//    if (e.getActionCommand().equals("answer1")) {
+//
+//      System.out.println("[QuizController]: Answer 1 Submitted");
+//
+//      String answer = this.model.getText("answer1");
+//      this.answer1 = answer;
+//
+//
+//
+//    }
+//
+//    if (e.getActionCommand().equals("answer2")) {
+//
+//      System.out.println("[QuizController]: Answer 2 Submitted");
+//
+//      String answer = this.model.getText("answer2");
+//      this.answer2 = answer;
+//
+//    }
+//
+//    if (e.getActionCommand().equals("answer3")) {
+//
+//      System.out.println("[QuizController]: Answer 3 Submitted");
+//
+//      String answer = this.model.getText("answer3");
+//      this.answer3 = answer;
+//
+//
+//    }
+//
+//    if (e.getActionCommand().equals("answer4")) {
+//
+//      System.out.println("[QuizController]: Answer 4 Submitted");
+//
+//      String answer = this.model.getText("answer4");
+//      this.answer4 = answer;
+//
+//
+//    }
 
     if (e.getActionCommand().equals("correctToggle")) {
 
