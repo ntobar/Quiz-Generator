@@ -78,9 +78,14 @@ public class QuestionPanel extends JPanel {
     this.answer1.setActionCommand("answer1");
     this.answer1.setToolTipText("<html><b><font color=red>"
             + "Please enter some text here" + "</font></b></html>");
+    this.setVisible(true);
+    answer1.requestFocusInWindow();
 
     this.answer2 = new JTextField();
     this.answer2.setActionCommand("answer2");
+    this.answer2.setFont(new java.awt.Font("Arial", Font.ITALIC | Font.BOLD, 12));
+    this.answer2.setForeground(Color.BLUE);
+    this.answer2.setBackground(Color.CYAN);
 
     this.answer3 = new JTextField();
     this.answer3.setActionCommand("answer3");
