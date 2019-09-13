@@ -3,6 +3,7 @@ package Controller;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
@@ -70,6 +71,20 @@ public class QuizController implements IQuizController {
 
       System.out.println("[QuizController]: submitButton pressed");
 
+      String q1 = this.model.getText("question");
+      this.question = q1;
+      String answer = this.model.getText("answer1");
+      this.answer1 = answer;
+      String answer1 = this.model.getText("answer2");
+      this.answer2 = answer1;
+      String answer2 = this.model.getText("answer3");
+      this.answer3 = answer2;
+      String answer3 = this.model.getText("answer4");
+      this.answer4 = answer3;
+
+
+
+
       ArrayList<String> answers = new ArrayList<>();
 
 //      answers.add(correctAnswer);
@@ -131,6 +146,7 @@ public class QuizController implements IQuizController {
     if (e.getActionCommand().equals("question")) {
 
       System.out.println("[QuizController]: Question Submitted");
+
 
       String q = this.model.getText("question");
       this.question = q;
@@ -235,6 +251,73 @@ public class QuizController implements IQuizController {
 
   }
 
+
+
+  @Override
+  public void focusGained(FocusEvent e) {
+
+  }
+
+  @Override
+  public void focusLost(FocusEvent e) {
+    JTextField a = (JTextField)e.getSource();
+
+
+
+//    (JTextField)e.getID();
+//
+//
+//    if ((JTextField)e.equals("question")) {
+//
+//      System.out.println("[QuizController]: Question Submitted");
+//
+//      String q = this.model.getText("question");
+//      this.question = q;
+//
+//    }
+//
+//    if (e.getActionCommand().equals("answer1")) {
+//
+//      System.out.println("[QuizController]: Answer 1 Submitted");
+//
+//      String answer = this.model.getText("answer1");
+//      this.answer1 = answer;
+//
+//
+//
+//    }
+//
+//    if (e.getActionCommand().equals("answer2")) {
+//
+//      System.out.println("[QuizController]: Answer 2 Submitted");
+//
+//      String answer = this.model.getText("answer2");
+//      this.answer2 = answer;
+//
+//    }
+//
+//    if (e.getActionCommand().equals("answer3")) {
+//
+//      System.out.println("[QuizController]: Answer 3 Submitted");
+//
+//      String answer = this.model.getText("answer3");
+//      this.answer3 = answer;
+//
+//
+//    }
+//
+//    if (e.getActionCommand().equals("answer4")) {
+//
+//      System.out.println("[QuizController]: Answer 4 Submitted");
+//
+//      String answer = this.model.getText("answer4");
+//      this.answer4 = answer;
+//
+//
+//    }
+
+  }
+
   @Override
   public void insertUpdate(DocumentEvent e) {
 
@@ -279,4 +362,6 @@ public class QuizController implements IQuizController {
   public void mouseExited(MouseEvent e) {
 
   }
+
+
 }
