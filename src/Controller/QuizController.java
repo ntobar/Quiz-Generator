@@ -52,6 +52,30 @@ public class QuizController implements IQuizController {
   }
 
 
+  public void setTexts() {
+
+    String q1 = this.model.getText("question");
+    this.question = q1;
+
+    //Recording Answer 1 JTextArea Text
+    String answer00 = this.model.getText("answer1");
+    this.answer1 = answer00;
+
+    //Recording Answer 2 JTextArea Text
+    String answer01 = this.model.getText("answer2");
+    this.answer2 = answer01;
+
+    //Recording Answer 3 JTextArea Text
+    String answer02 = this.model.getText("answer3");
+    this.answer3 = answer02;
+
+    //Recording Answer 4 JTextArea Text
+    String answer03 = this.model.getText("answer4");
+    this.answer4 = answer03;
+
+  }
+
+
 
 
   @Override
@@ -72,24 +96,24 @@ public class QuizController implements IQuizController {
       System.out.println("[QuizController]: submitButton pressed");
 
       //Recording Question JTextArea Text
-      String q1 = this.model.getText("question");
-      this.question = q1;
-
-      //Recording Answer 1 JTextArea Text
-      String answer = this.model.getText("answer1");
-      this.answer1 = answer;
-
-      //Recording Answer 2 JTextArea Text
-      String answer01 = this.model.getText("answer2");
-      this.answer2 = answer01;
-
-      //Recording Answer 3 JTextArea Text
-      String answer02 = this.model.getText("answer3");
-      this.answer3 = answer02;
-
-      //Recording Answer 4 JTextArea Text
-      String answer03 = this.model.getText("answer4");
-      this.answer4 = answer03;
+//      String q1 = this.model.getText("question");
+//      this.question = q1;
+//
+//      //Recording Answer 1 JTextArea Text
+//      String answer00 = this.model.getText("answer1");
+//      this.answer1 = answer00;
+//
+//      //Recording Answer 2 JTextArea Text
+//      String answer01 = this.model.getText("answer2");
+//      this.answer2 = answer01;
+//
+//      //Recording Answer 3 JTextArea Text
+//      String answer02 = this.model.getText("answer3");
+//      this.answer3 = answer02;
+//
+//      //Recording Answer 4 JTextArea Text
+//      String answer03 = this.model.getText("answer4");
+//      this.answer4 = answer03;
 
 
 
@@ -208,6 +232,8 @@ public class QuizController implements IQuizController {
 
       if(((JRadioButton) e.getSource()).isSelected()) {
 
+        this.setTexts();
+
         this.correctAnswer = answer1;
         //this.transferableAns = answer1;
 
@@ -222,6 +248,7 @@ public class QuizController implements IQuizController {
 
       if(((JRadioButton) e.getSource()).isSelected()) {
 
+        this.setTexts();
         this.correctAnswer = answer2;
        // this.transferableAns = answer2;
 
@@ -236,6 +263,7 @@ public class QuizController implements IQuizController {
 
       if(((JRadioButton) e.getSource()).isSelected()) {
 
+        this.setTexts();
         this.correctAnswer = answer3;
         //this.transferableAns = answer3;
 
@@ -249,6 +277,7 @@ public class QuizController implements IQuizController {
 
       if(((JRadioButton) e.getSource()).isSelected()) {
 
+        this.setTexts();
         this.correctAnswer = answer4;
         //this.transferableAns = answer4;
 
