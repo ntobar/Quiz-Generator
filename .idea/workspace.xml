@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caec011c-e72b-476f-94d8-e7ebc14737f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuizGenerator/Controller/QuizController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuizGenerator/Controller/QuizController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuizGenerator/Model/QuestionPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuizGenerator/Model/QuestionPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/QuizController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/QuestionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/QuestionPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,34 +35,38 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="16" />
+          <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="16" />
+          <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9633" />
+          <entry key="java" value="9774" />
+          <entry key="md" value="602" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9633" />
+          <entry key="JAVA" value="9774" />
+          <entry key="Markdown" value="602" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47607842">
+    <splitter split-orientation="horizontal" split-proportion="0.2504303">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Model/QuestionPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-403">
-                  <caret line="195" column="40" selection-start-line="195" selection-start-column="40" selection-end-line="195" selection-end-column="40" />
+                <state relative-caret-position="480">
+                  <caret line="290" column="41" lean-forward="true" selection-start-line="290" selection-start-column="41" selection-end-line="290" selection-end-column="41" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -105,7 +114,7 @@
             <entry file="file://$PROJECT_DIR$/src/Controller/QuizController.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1620">
-                  <caret line="170" selection-start-line="170" selection-end-line="170" />
+                  <caret line="175" selection-start-line="175" selection-end-line="175" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -129,14 +138,26 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Controller/QuizController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="174">
-                  <caret line="279" column="24" selection-start-line="279" selection-start-column="24" selection-end-line="279" selection-end-column="24" />
+                <state relative-caret-position="1399">
+                  <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="374">
+                    <caret line="28" column="106" selection-start-line="28" selection-start-column="106" selection-end-line="28" selection-end-column="106" />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -165,6 +186,7 @@
         <option value="$PROJECT_DIR$/src/Controller/IQuizController.java" />
         <option value="$PROJECT_DIR$/src/Model/QuestionPanel.java" />
         <option value="$PROJECT_DIR$/src/Controller/QuizController.java" />
+        <option value="$PROJECT_DIR$/src/README.md" />
       </list>
     </option>
   </component>
@@ -220,7 +242,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566417896890" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568386629187" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -277,18 +299,18 @@
       <workItem from="1565880082786" duration="13661000" />
       <workItem from="1566482140011" duration="4813000" />
       <workItem from="1567389349919" duration="11000" />
-      <workItem from="1568302474611" duration="2909000" />
+      <workItem from="1568302474611" duration="4230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30355000" />
+    <option name="totallyTimeSpent" value="31676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08941345" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16881259" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -298,7 +320,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16626506" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16626506" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2807229" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -375,8 +397,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/QuestionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-403">
-          <caret line="195" column="40" selection-start-line="195" selection-start-column="40" selection-end-line="195" selection-end-column="40" />
+        <state relative-caret-position="480">
+          <caret line="290" column="41" lean-forward="true" selection-start-line="290" selection-start-column="41" selection-end-line="290" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -385,11 +407,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/QuizController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="279" column="24" selection-start-line="279" selection-start-column="24" selection-end-line="279" selection-end-column="24" />
+        <state relative-caret-position="1399">
+          <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="374">
+            <caret line="28" column="106" selection-start-line="28" selection-start-column="106" selection-end-line="28" selection-end-column="106" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

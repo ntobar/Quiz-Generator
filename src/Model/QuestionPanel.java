@@ -283,4 +283,13 @@ public class QuestionPanel extends JPanel {
 
   }
 
+  public void unselectToggles() {
+
+    this.correctToggle.setSelected(false);
+    this.wrongToggle1.setSelected(false);
+    this.wrongToggle2.setSelected(false);
+    this.wrongToggle3.setSelected(false);
+
+  }
+
 }

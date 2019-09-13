@@ -52,7 +52,10 @@ public class QuizController implements IQuizController {
   }
 
 
-  public void setTexts() {
+
+
+
+  private void setTexts() {
 
     String q1 = this.model.getText("question");
     this.question = q1;
@@ -94,6 +97,7 @@ public class QuizController implements IQuizController {
     if (e.getActionCommand().equals("submitButton")) {
 
       System.out.println("[QuizController]: submitButton pressed");
+
 
       //Recording Question JTextArea Text
 //      String q1 = this.model.getText("question");
@@ -147,6 +151,7 @@ public class QuizController implements IQuizController {
       //This resets fields
       this.model.resetFields();
       this.model.resetRadio();
+      this.model.unselectToggles();
       System.out.println("[QuizController]: Fields Reset");
 
     }
