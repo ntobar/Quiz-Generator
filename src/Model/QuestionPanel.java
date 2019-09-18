@@ -6,6 +6,9 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.event.DocumentListener;
 
+import static java.awt.GridBagConstraints.LINE_END;
+import static javax.swing.SwingConstants.CENTER;
+
 
 /**
  * This Class is responsible for all the Front-End development for
@@ -64,7 +67,12 @@ public class QuestionPanel extends JPanel {
 
 
 
-    this.setLayout(new BoxLayout(this,BoxLayout.PAGE_AXIS));
+    //this.setLayout(new BoxLayout(this,BoxLayout.PAGE_AXIS));
+    //this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
+    this.setLayout(new GridBagLayout());
+    GridBagConstraints c = new GridBagConstraints();
+
+
 
 
     this.qLabel = new JLabel("Create a Question");
@@ -133,27 +141,79 @@ public class QuestionPanel extends JPanel {
 
 
 
-    this.add(qLabel);
-    this.add(qTextArea);
 
-    this.add(answerLabel1);
-    this.add(answer1);
-    this.add(correctToggle);
+    c.gridx = 0;
+    c.gridy = 0;
+    c.weightx = 0;
+    this.add(qLabel, c);
+    c.weightx = 0;
 
-    this.add(answerLabel2);
-    this.add(answer2);
-    this.add(wrongToggle1);
+    c.gridx = 2;
+    c.gridwidth = 2;
+    this.add(qTextArea, c);
+    c.gridwidth = 1;
 
-    this.add(answerLabel3);
-    this.add(answer3);
-    this.add(wrongToggle2);
+    c.gridx = 0;
+    c.gridy = 1;
 
-    this.add(answerLabel4);
-    this.add(answer4);
-    this.add(wrongToggle3);
+    this.add(answerLabel1, c);
 
-    this.add(submitButton);
-    this.add(finishButton);
+    c.gridx = 3;
+    c.gridy = 1;
+
+//    c.gridwidth = 3;
+
+    this.add(answer1, c);
+//    c.gridwidth = 1;
+
+    c.gridx = 4;
+    c.gridy = 1;
+
+    this.add(correctToggle, c);
+
+    c.gridx = 0;
+    c.gridy = 2;
+
+    this.add(answerLabel2, c);
+    this.add(answer2, c);
+
+    c.gridx = 1;
+    c.gridy = 2;
+
+    this.add(wrongToggle1, c);
+
+
+    c.gridx = 0;
+    c.gridy = 3;
+
+    this.add(answerLabel3, c);
+    this.add(answer3, c);
+
+    c.gridx = 1;
+    c.gridy = 3;
+
+    this.add(wrongToggle2, c);
+
+    c.gridx = 0;
+    c.gridy = 4;
+
+    this.add(answerLabel4, c);
+    this.add(answer4, c);
+
+    c.gridx = 1;
+    c.gridy = 4;
+
+    this.add(wrongToggle3, c);
+
+    c.gridx = 0;
+    c.gridy = 5;
+
+    this.add(submitButton, c);
+
+    c.gridx = 1;
+    c.gridy = 5;
+
+    this.add(finishButton, c);
 
    // this.add(answer);
 

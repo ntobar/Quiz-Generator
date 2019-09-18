@@ -162,6 +162,7 @@ public class QuestionGraphics extends JPanel {
   }
 
 
+
   public void displayQuestion() {
     Set<Question> questionSet = questions.keySet();
     ArrayList<Question> questionList = new ArrayList<>(questionSet);
@@ -244,10 +245,19 @@ public class QuestionGraphics extends JPanel {
 
   }
 
+  /**
+   * Adds Action Listener to the next button
+   * @param listen
+   */
   public void setActionListener(ActionListener listen) {
     this.nextButton.addActionListener(listen);
   }
 
+
+  /**
+   * Adds Mouse Listeners to the Labels
+   * @param mListen
+   */
   public void setMouseListener(MouseListener mListen) {
 
     this.answer1Label.addMouseListener(mListen);
@@ -259,6 +269,9 @@ public class QuestionGraphics extends JPanel {
   }
 
 
+  /**
+   * This method is responsible for resetting the color of the Labels
+   */
   public void resetLabels() {
 
     ArrayList<JLabel> labels = new ArrayList<>();
@@ -280,12 +293,11 @@ public class QuestionGraphics extends JPanel {
   }
 
 
-
-
-
-
-
-
+  /**
+   * This Method is responsible for displaying the correct and wrong answers.
+   * It displays the correct answer is green while the wrong answers are in red.
+   * @param label - The JLabel corresponding to the correct answer label.
+   */
   public void displayCorrect(JLabel label) {
 
     ArrayList<JLabel> labels = new ArrayList<>();
