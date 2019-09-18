@@ -83,7 +83,7 @@ public class QuestionPanel extends JPanel {
 
     this.answer2 = new JTextField();
     this.answer2.setActionCommand("answer2");
-    this.answer2.setFont(new java.awt.Font("Arial", Font.ITALIC | Font.BOLD, 12));
+    this.answer2.setFont(new java.awt.Font("Arial",  Font.BOLD, 12));
     this.answer2.setForeground(Color.BLUE);
     this.answer2.setBackground(Color.CYAN);
 

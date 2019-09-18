@@ -1,19 +1,19 @@
 package Model;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
-
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.plaf.ColorUIResource;
 
 
+/**
+ * This Class is responsible for the Graphics when the user is taking the quiz
+ */
 public class QuestionGraphics extends JPanel {
 
   private HashMap<Question, String> questions;
@@ -32,6 +32,10 @@ public class QuestionGraphics extends JPanel {
   private String score;
 
 
+  /**
+   *
+   * @param questions
+   */
   public QuestionGraphics(HashMap<Question, String> questions) {
     super();
 
@@ -71,7 +75,7 @@ public class QuestionGraphics extends JPanel {
 
     this.questionLabel = new JLabel();
     this.questionLabel.setOpaque(true);
-    this.questionLabel.setBackground(Color.orange);
+    this.questionLabel.setBackground(MAIN_BLUE);
     this.questionLabel.setBorder(BorderFactory.createTitledBorder(border1,
             "Question", 0, 0, Font.getFont(Font.DIALOG),
             SEC_BLUE));
