@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caec011c-e72b-476f-94d8-e7ebc14737f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Model/QuestionGraphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/QuestionGraphics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/QuestionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/QuestionPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -43,13 +42,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10540" />
+          <entry key="java" value="10786" />
           <entry key="md" value="602" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10540" />
+          <entry key="JAVA" value="10786" />
           <entry key="Markdown" value="602" />
         </counts>
       </usages-collector>
@@ -62,8 +61,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Model/QuestionPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="319">
-                  <caret line="144" column="24" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
+                <state relative-caret-position="279">
+                  <caret line="156" column="20" lean-forward="true" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -237,7 +236,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568835086444" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568902884134" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -300,12 +299,12 @@
       <workItem from="1566482140011" duration="4813000" />
       <workItem from="1567389349919" duration="11000" />
       <workItem from="1568302474611" duration="5313000" />
-      <workItem from="1568814920473" duration="2218000" />
+      <workItem from="1568814920473" duration="3616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34977000" />
+    <option name="totallyTimeSpent" value="36375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -418,8 +417,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/QuestionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="144" column="24" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
+        <state relative-caret-position="279">
+          <caret line="156" column="20" lean-forward="true" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

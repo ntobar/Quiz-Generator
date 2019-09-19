@@ -82,7 +82,7 @@ public class QuestionPanel extends JPanel {
     //qTextArea.getDocument().addDocumentListener();
 
     //Initializing answer Text Fields
-    this.answer1 = new JTextField();
+    this.answer1 = new JTextField(20);
     this.answer1.setActionCommand("answer1");
     this.answer1.setToolTipText("<html><b><font color=red>"
             + "Please enter some text here" + "</font></b></html>");
@@ -141,25 +141,37 @@ public class QuestionPanel extends JPanel {
 
 
 
+    //------------------------------------
+    //------------- QTextArea ------------
+    //------------------------------------
 
-    c.gridx = 0;
-    c.gridy = 0;
-    c.weightx = 0;
+
+    c.gridx = 0; //X
+    c.gridy = 0; //Y
+
+
     this.add(qLabel, c);
-    c.weightx = 0;
+
 
     c.gridx = 2;
     c.gridwidth = 2;
+    //c.gridheight = 2;
     this.add(qTextArea, c);
     c.gridwidth = 1;
+    //c.gridheight = 1;
+
+
+    //------------------------------------
+    //------------- Answer 1 -------------
+    //------------------------------------
 
     c.gridx = 0;
-    c.gridy = 1;
+    c.gridy = 2;
 
     this.add(answerLabel1, c);
 
     c.gridx = 3;
-    c.gridy = 1;
+    c.gridy = 2;
 
 //    c.gridwidth = 3;
 
@@ -167,51 +179,73 @@ public class QuestionPanel extends JPanel {
 //    c.gridwidth = 1;
 
     c.gridx = 4;
-    c.gridy = 1;
+    c.gridy = 2;
 
     this.add(correctToggle, c);
 
-    c.gridx = 0;
-    c.gridy = 2;
-
-    this.add(answerLabel2, c);
-    this.add(answer2, c);
-
-    c.gridx = 1;
-    c.gridy = 2;
-
-    this.add(wrongToggle1, c);
-
+    //------------------------------------
+    //------------- Answer 2 -------------
+    //------------------------------------
 
     c.gridx = 0;
     c.gridy = 3;
+
+
+    this.add(answerLabel2, c);
+
+    c.gridx = 1;
+    c.gridy = 3;
+
+    this.add(answer2, c);
+
+    c.gridx = 2;
+    c.gridy = 3;
+
+    this.add(wrongToggle1, c);
+
+    //------------------------------------
+    //------------- Answer 3 -------------
+    //------------------------------------
+
+
+    c.gridx = 0;
+    c.gridy = 4;
 
     this.add(answerLabel3, c);
     this.add(answer3, c);
 
     c.gridx = 1;
-    c.gridy = 3;
+    c.gridy = 4;
 
     this.add(wrongToggle2, c);
 
+    //------------------------------------
+    //------------- Answer 4 -------------
+    //------------------------------------
+
     c.gridx = 0;
-    c.gridy = 4;
+    c.gridy = 5;
+
 
     this.add(answerLabel4, c);
     this.add(answer4, c);
 
     c.gridx = 1;
-    c.gridy = 4;
+    c.gridy = 5;
 
     this.add(wrongToggle3, c);
 
+    //------------------------------------
+    //------------- Buttons --------------
+    //------------------------------------
+
     c.gridx = 0;
-    c.gridy = 5;
+    c.gridy = 6;
 
     this.add(submitButton, c);
 
     c.gridx = 1;
-    c.gridy = 5;
+    c.gridy = 6;
 
     this.add(finishButton, c);
 
