@@ -4,10 +4,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.border.Border;
-import javax.swing.event.DocumentListener;
 
-import static java.awt.GridBagConstraints.LINE_END;
-import static javax.swing.SwingConstants.CENTER;
 
 
 /**
@@ -39,7 +36,10 @@ public class QuestionPanel extends JPanel {
   public JButton finishButton;
 
 
-
+  /**
+   *
+   * @param quiz
+   */
   public QuestionPanel(Quiz quiz) {
     super();
 
@@ -89,16 +89,18 @@ public class QuestionPanel extends JPanel {
     this.setVisible(true);
     answer1.requestFocusInWindow();
 
-    this.answer2 = new JTextField();
+
+
+    this.answer2 = new JTextField(20);
     this.answer2.setActionCommand("answer2");
     this.answer2.setFont(new java.awt.Font("Arial",  Font.BOLD, 12));
     this.answer2.setForeground(Color.BLUE);
     this.answer2.setBackground(Color.CYAN);
 
-    this.answer3 = new JTextField();
+    this.answer3 = new JTextField(20);
     this.answer3.setActionCommand("answer3");
 
-    this.answer4 = new JTextField();
+    this.answer4 = new JTextField(20);
     this.answer4.setActionCommand("answer4");
 
     //Initializing Toggle Buttons
@@ -146,8 +148,8 @@ public class QuestionPanel extends JPanel {
     //------------------------------------
 
 
-    c.gridx = 0; //X
-    c.gridy = 0; //Y
+    c.gridx = 0;
+    c.gridy = 0;
 
 
     this.add(qLabel, c);
@@ -155,7 +157,7 @@ public class QuestionPanel extends JPanel {
 
     c.gridx = 2;
     c.gridwidth = 2;
-    //c.gridheight = 2;
+
     this.add(qTextArea, c);
     c.gridwidth = 1;
     //c.gridheight = 1;
@@ -193,12 +195,12 @@ public class QuestionPanel extends JPanel {
 
     this.add(answerLabel2, c);
 
-    c.gridx = 1;
+    c.gridx = 3;
     c.gridy = 3;
 
     this.add(answer2, c);
 
-    c.gridx = 2;
+    c.gridx = 4;
     c.gridy = 3;
 
     this.add(wrongToggle1, c);
@@ -212,9 +214,13 @@ public class QuestionPanel extends JPanel {
     c.gridy = 4;
 
     this.add(answerLabel3, c);
+
+    c.gridx = 3;
+    c.gridy = 4;
+
     this.add(answer3, c);
 
-    c.gridx = 1;
+    c.gridx = 4;
     c.gridy = 4;
 
     this.add(wrongToggle2, c);
@@ -228,12 +234,19 @@ public class QuestionPanel extends JPanel {
 
 
     this.add(answerLabel4, c);
+
+    c.gridx = 3;
+    c.gridy = 5;
+
+
     this.add(answer4, c);
 
-    c.gridx = 1;
+    c.gridx = 4;
     c.gridy = 5;
 
     this.add(wrongToggle3, c);
+
+
 
     //------------------------------------
     //------------- Buttons --------------

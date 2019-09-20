@@ -17,6 +17,10 @@ import Model.Question;
 import Model.QuestionGraphics;
 import Model.QuestionPanel;
 
+
+/**
+ * This Class is the Controller in the MVC architecture for the Quiz.
+ */
 public class QuizController implements IQuizController {
   private QuestionPanel model;
   private QuestionGraphics questionModel;
