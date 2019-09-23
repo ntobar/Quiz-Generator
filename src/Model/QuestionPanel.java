@@ -34,6 +34,7 @@ public class QuestionPanel extends JPanel {
   public JButton submitButton;
 
   public JButton finishButton;
+  public ButtonGroup buttonGroup;
 
 
   /**
@@ -133,11 +134,13 @@ public class QuestionPanel extends JPanel {
 
 
 
-    ButtonGroup buttonGroup = new ButtonGroup();
+    buttonGroup = new ButtonGroup();
     buttonGroup.add(correctToggle);
     buttonGroup.add(wrongToggle1);
     buttonGroup.add(wrongToggle2);
     buttonGroup.add(wrongToggle3);
+
+
 
 
 
@@ -280,22 +283,24 @@ public class QuestionPanel extends JPanel {
 
   public void resetRadio() {
 
-    ArrayList<JRadioButton> radioList = new ArrayList<>();
-    radioList.add(correctToggle);
-    radioList.add(wrongToggle1);
-    radioList.add(wrongToggle2);
-    radioList.add(wrongToggle3);
+    buttonGroup.clearSelection();
 
-
-    for(int i = 0; i < 4; i++) {
-
-
-      radioList.get(i).setSelected(false);
-
-
-
-
-    }
+//    ArrayList<JRadioButton> radioList = new ArrayList<>();
+//    radioList.add(correctToggle);
+//    radioList.add(wrongToggle1);
+//    radioList.add(wrongToggle2);
+//    radioList.add(wrongToggle3);
+//
+//
+//    for(int i = 0; i < 4; i++) {
+//
+//
+//      radioList.get(i).setSelected(false);
+//
+//
+//
+//
+//    }
   }
 
 
