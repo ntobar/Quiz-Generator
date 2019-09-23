@@ -42,6 +42,7 @@ public class QuizController implements IQuizController {
     questionModel.setActionListener(this);
 
 
+    //Initializing Fields
     this.question = "";
     this.answers = new ArrayList<>();
     this.correctAnswer = "";

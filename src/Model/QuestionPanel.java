@@ -162,6 +162,10 @@ public class QuestionPanel extends JPanel {
     c.gridwidth = 1;
     //c.gridheight = 1;
 
+    c.insets.set(50,0,100,0);
+
+
+
 
     //------------------------------------
     //------------- Answer 1 -------------
@@ -171,6 +175,8 @@ public class QuestionPanel extends JPanel {
     c.gridy = 2;
 
     this.add(answerLabel1, c);
+
+
 
     c.gridx = 3;
     c.gridy = 2;
@@ -184,6 +190,10 @@ public class QuestionPanel extends JPanel {
     c.gridy = 2;
 
     this.add(correctToggle, c);
+
+    //c.insets.set(0,0,0,0);
+
+
 
     //------------------------------------
     //------------- Answer 2 -------------
@@ -292,7 +302,6 @@ public class QuestionPanel extends JPanel {
   /**
    * Connects Front-End buttons to Back-End Controller
    * @param listen - ActionListener (Applicable to Buttons)
-   * @param listenDoc - Document Listener (Applicable to Text Area)
    */
   public void setActionListener(ActionListener listen) {
 
