@@ -2,19 +2,18 @@ package Model;
 
 import java.awt.*;
 import java.util.ArrayList;
-
 import javax.swing.*;
 import javax.swing.border.Border;
 
 /**
- * This Class represents a Question on the Quizz
+ * This Class represents a Question on the Quiz
  */
 public class Question extends JPanel {
   //Model Components
   private String qstion;
   private ArrayList<String> answers;
   private String correctAnswer;
-  //GUI components
+  //GUI components / View Components
   public JPanel questionNamePanel;
   public JTextField questionPanel;
   public JPanel answersPanel;
@@ -28,6 +27,8 @@ public class Question extends JPanel {
 
     //Dimensions and Set Up
     this.setPreferredSize(new Dimension(500, 500));
+
+//    this.setSize(new Dimension(200,200));
 
 
     Color MAIA_BG_COLOR = new Color(40, 45, 51);

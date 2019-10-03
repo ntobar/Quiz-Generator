@@ -8,9 +8,7 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import javax.swing.plaf.ColorUIResource;
 
 import Model.Question;
@@ -57,9 +55,10 @@ public class QuizController implements IQuizController {
   }
 
 
-
-
-
+  /**
+   * This method retrieves the texts from the Question and Answer Fields
+   * to be able to store the Question with its answers.
+   */
   private void setTexts() {
 
     String q1 = this.model.getText("question");
@@ -143,7 +142,7 @@ public class QuizController implements IQuizController {
 
       this.model.getQuiz().getQuestions().put(q, correctAnswer);
 
-      model.setColor(Color.MAGENTA);
+      model.setColor(Color.GRAY);
 
       System.out.println("Question: " + question + "\n" +
               "Answer 1: " + answer1 + "\n" +
@@ -156,8 +155,7 @@ public class QuizController implements IQuizController {
       //This resets fields
       this.model.resetFields();
       this.model.resetRadio();
-      this.model.unselectToggles();
-      System.out.println("[QuizController]: Fields Reset");
+      System.out.println("[QuizController]: Toggles Reset");
 
     }
 

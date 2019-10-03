@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 
 
@@ -121,8 +122,27 @@ public class QuestionPanel extends JPanel {
     this.submitButton = new JButton("Submit");
     this.submitButton.setActionCommand("submitButton");
 
+    submitButton.setFont(submitButton.getFont().deriveFont(Font.BOLD));
+    submitButton.setOpaque(true);
+    submitButton.setBackground(Color.black);
+    submitButton.setForeground(new Color(218, 165, 32));
+    submitButton.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, new Color(218, 165, 32),
+            Color.black,
+            new Color(218, 165, 32), Color.BLACK));
+
+
     this.finishButton = new JButton("Finish");
     this.finishButton.setActionCommand("finishButton");
+
+    finishButton.setFont(finishButton.getFont().deriveFont(Font.BOLD));
+    finishButton.setOpaque(true);
+    finishButton.setBackground(Color.black);
+    finishButton.setForeground(new Color(218, 165, 32));
+    finishButton.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, new Color(218, 165, 32),
+            Color.black,
+            new Color(218, 165, 32), Color.BLACK));
 
 
 
@@ -165,7 +185,7 @@ public class QuestionPanel extends JPanel {
     c.gridwidth = 1;
     //c.gridheight = 1;
 
-    c.insets.set(50,0,100,0);
+    c.insets.set(50,20,50,20);
 
 
 
@@ -280,27 +300,13 @@ public class QuestionPanel extends JPanel {
   }
 
 
-
+  /**
+   * This method clears the Radio Button Group selection
+   */
   public void resetRadio() {
 
     buttonGroup.clearSelection();
 
-//    ArrayList<JRadioButton> radioList = new ArrayList<>();
-//    radioList.add(correctToggle);
-//    radioList.add(wrongToggle1);
-//    radioList.add(wrongToggle2);
-//    radioList.add(wrongToggle3);
-//
-//
-//    for(int i = 0; i < 4; i++) {
-//
-//
-//      radioList.get(i).setSelected(false);
-//
-//
-//
-//
-//    }
   }
 
 
@@ -374,6 +380,8 @@ public class QuestionPanel extends JPanel {
     }
   }
 
+
+  //NOT IN USE - DELETE?                                     {
   public JTextField getqTextArea() {
     return qTextArea;
   }
@@ -393,6 +401,7 @@ public class QuestionPanel extends JPanel {
   public JTextField getAnswer4() {
     return answer4;
   }
+  ////////////////////////////////////////////////////////// }
 
 
   public void resetFields() {
@@ -404,13 +413,13 @@ public class QuestionPanel extends JPanel {
 
   }
 
-  public void unselectToggles() {
-
-    this.correctToggle.setSelected(false);
-    this.wrongToggle1.setSelected(false);
-    this.wrongToggle2.setSelected(false);
-    this.wrongToggle3.setSelected(false);
-
-  }
+//  public void unselectToggles() {
+//
+//    this.correctToggle.setSelected(false);
+//    this.wrongToggle1.setSelected(false);
+//    this.wrongToggle2.setSelected(false);
+//    this.wrongToggle3.setSelected(false);
+//
+//  }
 
 }

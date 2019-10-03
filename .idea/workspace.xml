@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caec011c-e72b-476f-94d8-e7ebc14737f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuizGenerator/Controller/QuizController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuizGenerator/Controller/QuizController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuizGenerator/Model/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuizGenerator/Model/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/QuizGenerator/Model/QuestionPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuizGenerator/Model/QuestionPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/QuizController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/QuestionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/QuestionPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,7 +21,7 @@
     <session id="-1988685219">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.16" value="1" />
@@ -24,31 +30,33 @@
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="17" />
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="17" />
-          <entry key="Markdown" value="1" />
+          <entry key="Markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11105" />
+          <entry key="java" value="11550" />
           <entry key="md" value="602" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11105" />
+          <entry key="JAVA" value="11550" />
           <entry key="Markdown" value="602" />
         </counts>
       </usages-collector>
@@ -61,8 +69,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Model/QuestionPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="285" column="33" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
+                <state relative-caret-position="281">
+                  <caret line="372" lean-forward="true" selection-start-line="372" selection-end-line="372" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -82,8 +90,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Model/Question.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="990">
-                  <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
+                <state relative-caret-position="630">
+                  <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -94,8 +102,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Model/QuestionGraphics.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="930">
-                  <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="57" />
+                <state relative-caret-position="810">
+                  <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -118,8 +126,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Controller/QuizController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2400">
-                  <caret line="180" selection-start-line="180" selection-end-line="180" />
+                <state relative-caret-position="2190">
+                  <caret line="160" selection-start-line="160" selection-end-line="160" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -146,8 +154,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Controller/QuizController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-285">
-                  <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+                <state relative-caret-position="-49">
+                  <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -173,12 +181,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Model/CreateQuestion.java" />
-        <option value="$PROJECT_DIR$/src/Model/Question.java" />
         <option value="$PROJECT_DIR$/src/Model/Quiz.java" />
         <option value="$PROJECT_DIR$/src/Controller/IQuizController.java" />
         <option value="$PROJECT_DIR$/src/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Model/QuestionGraphics.java" />
+        <option value="$PROJECT_DIR$/src/Model/Question.java" />
         <option value="$PROJECT_DIR$/src/Controller/QuizController.java" />
         <option value="$PROJECT_DIR$/src/Model/QuestionPanel.java" />
       </list>
@@ -200,9 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,6 +236,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,18 +308,20 @@
       <workItem from="1567389349919" duration="11000" />
       <workItem from="1568302474611" duration="5313000" />
       <workItem from="1568814920473" duration="4894000" />
-      <workItem from="1568908633840" duration="2425000" />
+      <workItem from="1568908633840" duration="3598000" />
+      <workItem from="1569858034396" duration="280000" />
+      <workItem from="1569983265620" duration="514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40078000" />
+    <option name="totallyTimeSpent" value="42045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17310444" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13805436" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -321,7 +331,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16626506" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16626506" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2807229" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,16 +359,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="420">
-            <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/CreateQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -368,8 +368,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
+        <state relative-caret-position="630">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -378,8 +378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/QuestionGraphics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="57" />
+        <state relative-caret-position="810">
+          <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -408,18 +408,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/QuizController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="180" selection-start-line="180" selection-end-line="180" />
+        <state relative-caret-position="2190">
+          <caret line="160" selection-start-line="160" selection-end-line="160" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="405">
+            <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/QuestionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="285" column="33" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
+        <state relative-caret-position="281">
+          <caret line="372" lean-forward="true" selection-start-line="372" selection-end-line="372" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
