@@ -3,16 +3,6 @@
 ## A Dynamic and Simple Quiz Generator
 <!-- > <img src="" alt=""  width="300"/>  > <img src="" alt=""  width="300"/> -->
 
-> <a href=""><img src="" alt="i1" border="0" width="300"></a>
-> <a href=""><img src="" alt="i2" border="0" width="300"></a>
-
-
-
-
-
-
-
-
 
 ----
 ### Program Overview
@@ -34,14 +24,7 @@
   <!-- <img src="" alt=""/>
   width="500" -->
 
-- **Home IoT Integration (Coming Soon)**
 
-  iRoNa aims to seamlessly integrate all the aspects of a users Smart Home with the app.  This feature will allow a user to add any programmable IoT device to the app and specify the devices settings, so that when the alarm goes off and the user steps on the Mat, these settings are activated.
-
-
-
-
-### Specs
 
 
 
